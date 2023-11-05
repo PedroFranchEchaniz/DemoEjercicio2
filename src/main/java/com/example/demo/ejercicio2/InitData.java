@@ -2,7 +2,6 @@ package com.example.demo.ejercicio2;
 
 import com.example.demo.ejercicio2.Repositorio.CursOnlineRepository;
 import com.example.demo.ejercicio2.Repositorio.ProfesorRepository;
-import com.example.demo.ejercicio2.Repositorio.VideoRepository;
 import com.example.demo.ejercicio2.clases.CursoOnline;
 import com.example.demo.ejercicio2.clases.Profesor;
 import com.example.demo.ejercicio2.clases.Video;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class InitData {
     private final CursOnlineRepository cursOnlineRepository;
-    private final VideoRepository videoRepository;
     private final ProfesorRepository profesorRepository;
 
     @PostConstruct
