@@ -20,30 +20,35 @@ public class InitData {
     @PostConstruct
     public void init(){
         Profesor p1 = Profesor.builder()
+                .id(1L)
                 .nombre("Pedro")
                 .email("pedrofe.av@gmail.com")
                 .puntuacion(2L)
                 .build();
         profesorRepository.save(p1);
 
-        Video v1 = Video.builder()
-                .descripcion("Un video")
-                .ult("http://local")
-                .orden(2)
-                .build();
-        videoRepository.save(v1);
-
         CursoOnline c1 = CursoOnline.builder()
+                .id(1L)
                 .nombre("un curso")
                 .puntuacion(2)
                 .build();
         cursOnlineRepository.save(c1);
 
+        Video v1 = Video.builder()
+                .codVideo(1L)
+                .descripcion("Un video")
+                .ult("http://local")
+                .orden(2)
+                .build();
+
         v1.addToCurso(c1);
+
         c1.addToProfesor(p1);
 
-        videoRepository.save(v1);
         cursOnlineRepository.save(c1);
+
+        System.out.println(c1.getProfesor());
+        System.out.println(c1.getVideos());
 
 
     }

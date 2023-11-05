@@ -29,6 +29,7 @@ public class Profesor {
 
     @ToString.Exclude
     @OneToMany(mappedBy = "profesor", orphanRemoval = true)
+    @Builder.Default
     private List<CursoOnline> cursoOnlines = new ArrayList<>();
 
 }

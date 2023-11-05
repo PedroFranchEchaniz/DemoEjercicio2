@@ -11,7 +11,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Builder
 public class CursoOnline {
 
@@ -27,7 +26,7 @@ public class CursoOnline {
     @JoinColumn(name = "profesor_id")
     private Profesor profesor;
 
-    public void addToProfesor( Profesor p){
+    public void addToProfesor(Profesor p){
         this.profesor = p;
         p.getCursoOnlines().add(this);
     }
@@ -42,6 +41,7 @@ public class CursoOnline {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
+    @Builder.Default
     private List<Video> videos = new ArrayList<>();
 
 

@@ -9,7 +9,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class VideoPk implements Serializable {
 
-    private CursoOnline curso;
+    private CursoOnline cursoOnline;
 
     private Long codVideo;
 

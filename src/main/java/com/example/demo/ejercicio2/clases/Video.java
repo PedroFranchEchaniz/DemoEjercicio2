@@ -14,7 +14,7 @@ import lombok.*;
 public class Video {
 
     @Id @GeneratedValue
-    private Long id;
+    private Long codVideo;
 
     private int orden;
 
